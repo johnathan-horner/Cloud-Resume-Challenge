@@ -53,12 +53,12 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "AWS Certified Solutions Architect – Professional (SAP-C02)",
+          "name": "AWS Certified Solutions Architect - Professional (SAP-C02)",
           "validUntil": "2028-04"
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "AWS Certified Solutions Architect – Associate (SAA-002)",
+          "name": "AWS Certified Solutions Architect - Associate (SAA-002)",
           "validUntil": "2028-04"
         },
         {
@@ -130,10 +130,13 @@
                         <span class="text-primary">Horner</span>
                     </h1>
                     <div class="subheading mb-5">
-                        Brooklyn New York ·
+                        Brooklyn New York -
                         <a href="mailto:name@email.com">mrhorner819@gmail.com</a>
                     </div>
-                    <p class="lead mb-5">AWS Solutions Architect Professional and Generative AI Engineer with hands-on experience building and deploying production-grade serverless platforms on AWS. Architected Shoot It Picks, a live AI-powered NFL analytics platform using LangChain orchestration, dual-LLM inference, CI/CD automation, Terraform IaC, and secure multi-service cloud architecture.</p>
+                    <div class="subheading mb-5">
+                        Generative AI Engineer | AWS Solutions Architect Professional | AI Systems Builder
+                    </div>
+                    <p class="lead mb-5">I build production AI systems at the intersection of generative AI, quantitative risk, and regulatory compliance. Three live systems -- ShootItPicks, EduAI Connect, and FinTech AI -- are fully deployed on AWS with real infrastructure, real billing, and SR 11-7 Model Risk Management governance. AWS Solutions Architect Professional and AWS Certified Generative AI Professional.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/johnathan-horner-99b37782"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/jaythagreat1"><i class="fab fa-github"></i></a>
@@ -180,7 +183,7 @@
                                 <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Monitored infrastructure health and system performance across network and server environments, proactively identifying and resolving connectivity and security issues.</li>
                             </ul>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Jul 2023 – Oct 2025</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jul 2023 - Oct 2025</span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -282,10 +285,82 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Professional Projects</h2>
 
-                    <!-- Project 1: Shoot It Picks -->
+                    <!-- Project 1: EduAI Connect -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Shoot It Picks — AI Sports Betting Analytics Platform</h3>
+                            <h3 class="mb-0">EduAI Connect</h3>
+                            <div class="subheading mb-3">
+                                <a href="https://eduai-connect-horner.streamlit.app" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt me-1"></i>https://eduai-connect-horner.streamlit.app
+                                </a>
+                                <span class="mx-2">|</span>
+                                <a href="https://github.com/johnathan-horner/eduai-connect" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                Built a full-stack RAG system on Amazon Bedrock (Claude 3 Sonnet, Titan Embeddings) that helps teachers proactively identify at-risk students
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                Multi-agent orchestration using LangGraph StateGraph -- Grading Agent feeds shared state to At-Risk Detection Agent
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                FAISS vector store with HyDE query transformation and LLM-based re-ranking for improved retrieval quality
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                FERPA-compliant architecture: Bedrock Guardrails PII filtering, KMS CMK encryption, least-privilege IAM scoped to specific ARNs, CloudTrail audit logging
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                Infrastructure as code using AWS CDK -- S3, Lambda, API Gateway, EventBridge
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: FinTech AI -->
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">FinTech AI</h3>
+                            <div class="subheading mb-3">
+                                <a href="https://fintech-ai-horner.streamlit.app" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt me-1"></i>https://fintech-ai-horner.streamlit.app
+                                </a>
+                                <span class="mx-2">|</span>
+                                <a href="https://github.com/johnathan-horner/fintech-ai" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github me-1"></i>View Code
+                                </a>
+                            </div>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                Three LangGraph AI agents in sequence with shared state: market analysis, risk assessment, and portfolio management recommendations
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                SR 11-7 compliant Model Risk Management framework -- 6-model inventory, independent validation suite, PSI drift detection, immutable audit log, CRO report generator
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                Monte Carlo CVaR engine (10,000 simulations, fat-tail mixture distribution) and five historical stress scenarios: 2008 GFC, COVID crash, rate shock, tech selloff, flash crash
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                RAG pipeline over earnings transcripts, portfolio positions, and macro indicators using FAISS and Titan Embeddings
+                            </p>
+                            <p>
+                                <i class="fas fa-chevron-right text-primary me-2"></i>
+                                SEC/FINRA compliance guardrails, KMS encryption, CloudTrail audit logging, AWS CDK infrastructure
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Shoot It Picks -->
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Shoot It Picks - AI Sports Betting Analytics Platform</h3>
                             <div class="subheading mb-3">
                                 <a href="https://shootitpicks.com" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt me-1"></i>https://shootitpicks.com
@@ -431,11 +506,11 @@
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            AWS Certified Solutions Architect – Professional (SAP-C02) | Expires Apr 2028
+                            AWS Certified Solutions Architect - Professional (SAP-C02) | Expires Apr 2028
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            AWS Certified Solutions Architect – Associate (SAA-002) | Expires Apr 2028
+                            AWS Certified Solutions Architect - Associate (SAA-002) | Expires Apr 2028
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
