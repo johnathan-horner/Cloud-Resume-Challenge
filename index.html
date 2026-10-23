@@ -151,10 +151,10 @@
                         <div class="subheading mb-3">Live in production | <a href="https://shootitpicks.com">shootitpicks.com</a></div>
                         <ul class="fa-ul mb-0">
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Launched ShootItPicks as a live subscription product with 1,100+ automated tests gating every release by designing a serverless AWS architecture (Lambda, API Gateway, DynamoDB, Cognito, S3, CloudFront) with Stripe billing and CI/CD on least-privilege OIDC roles, built and maintained with Claude Code.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Kept every number in ShootItPicks' AI assistant tied to source data, with unverifiable answers replaced before display, by designing tool calling across 11 retrieval tools, code checks on each figure and a model from a different vendor grading each answer.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Kept every number in ShootItPicks' AI assistant tied to source data, with unverifiable answers replaced before display, by designing tool calling across 12 data tools, code checks on each figure and a model from a different vendor grading each answer.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Blocked a model that cost 7 times more but scored below the current one by creating a 51-scenario evaluation suite, including adversarial cases, that gates every model change.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put live prices from 7 regulated US sportsbooks on 900+ priced sides across 15 games by integrating The Odds API with 100% player matching, line and price always taken from the same book, vig removed on two-sided markets and a hard credit cap with alerts.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Brought the model's accuracy level with the betting market (Brier 0.1460 vs. 0.1467 on held-out weeks) by measuring it against market prices, finding most displayed edges were noise, and pulling each estimate toward the market with weekly refits.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put live prices from 7 regulated US sportsbooks on 900+ priced sides by integrating The Odds API with 100% player matching, line and price from the same book, vig removed and a hard credit cap with alerts.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Brought the model's accuracy level with the betting market (Brier 0.1460 vs. 0.1467 on held-out weeks) by measuring it against market prices and pulling each estimate toward the market with weekly refits.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Removed a 25.7-point phantom edge from live prices by tracing it to invalid averaging of American odds and rebuilding the math in probability space, verified against 108 live market sides.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Cut request latency from 5.5 seconds to 0.15 seconds by finding that each request scanned 321 season records to use about 16 and re-partitioning DynamoDB by week.</li>
                         </ul>
@@ -164,33 +164,25 @@
                         <div class="subheading mb-3">Live public demo | <a href="https://fintech-ai-horner.streamlit.app">fintech-ai-horner.streamlit.app</a></div>
                         <ul class="fa-ul mb-0">
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Passed 22 of 23 held-out RAG test questions with 95.2% exact-fact accuracy on FinTech AI by building a 3-agent LangGraph pipeline (market analysis, risk assessment, portfolio management) with FAISS retrieval, HyDE, a cross-encoder re-ranker and an independent second model grading every answer.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put the agent pipeline under bank-style model risk controls, with the VaR backtest in the Basel green zone (Kupiec p-value 0.72 to 0.78 over 254 days), by gating each agent behind its own approval record, PSI drift monitoring and audit traces. A blocked agent falls back to a data-derived answer instead of guessing.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Defined the production AWS architecture for FinTech AI in CDK, including Bedrock Guardrails, KMS encryption, CloudTrail and 7-year log retention, validated by cdk synth in CI, and validated Amazon Bedrock as the primary model on held-out evaluation, with automatic fallback to a second vendor.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put the agent pipeline under bank-style model risk controls, with the VaR backtest in the Basel green zone (Kupiec p-value 0.72 to 0.78 over 254 days), by gating each agent behind its own approval record, PSI drift monitoring and audit traces.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Defined FinTech AI's production AWS architecture in CDK (Bedrock Guardrails, KMS, CloudTrail, 7-year log retention), validated by cdk synth in CI, with Bedrock as primary model only after it passed held-out evaluation.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Exposed FinTech AI and Transaction Anomaly Detection to AI assistants through 2 FastMCP servers with 6 tools each, read-only and deterministic, so the same request always returns the same answer with no model calls.</li>
                         </ul>
                     </div>
                     <div class="mb-5">
+                        <h3 class="mb-0">Medical Image Triage</h3>
+                        <div class="subheading mb-3">Reference platform on public data</div>
+                        <ul class="fa-ul mb-0">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Caught 99.5% of pneumonia cases (92.1% accuracy) on held-out chest X-rays by fine-tuning an image model on public MedMNIST data, auto-triaging 76.9% of cases with zero missed pneumonia and routing the rest to human review.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-5">
                         <h3 class="mb-0">EduAI Connect</h3>
-                        <div class="subheading mb-3">Architecture design, public demo in progress</div>
+                        <div class="subheading mb-3">Public demo on synthetic data</div>
                         <ul class="fa-ul mb-0">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Designed a LangGraph multi-agent graph with re-ranked retrieval to help teachers spot students who are falling behind, with a privacy design (Bedrock Guardrails, KMS encryption, audit logging) that is partly built, now being rebuilt as a working public demo.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Designed a FERPA-aligned student risk platform as a LangGraph multi-agent graph with re-ranked retrieval on Bedrock, PII guardrails and audit logging, with a public demo on synthetic data. ConnectIQ | Architecture design • Scoped ConnectIQ, a multi-tenant AI call center in 14 languages, on Amazon Connect, Lex and Bedrock, with escalation prediction that routes high-risk callers to human agents. cdk-ai-constructs | Published npm package • Packaged 9 reusable AWS building blocks for Bedrock agents, SageMaker endpoints, multi-tenant Cognito, auditable S3 and Stripe billing into @johnathan-horner/cdk-ai-constructs on npm, a TypeScript library covered by 155 tests in CI.</li>
                         </ul>
                     </div>
-                    <div class="mb-5">
-                        <h3 class="mb-0">ConnectIQ</h3>
-                        <div class="subheading mb-3">Architecture design</div>
-                        <ul class="fa-ul mb-0">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Scoped ConnectIQ, a multi-tenant AI call center covering 14 languages across 3 per-seat pricing tiers, by designing it on Amazon Connect, Lex and Bedrock with escalation prediction that routes high-risk callers to human agents before they churn.</li>
-                        </ul>
-                    </div>
-                    <div class="mb-5">
-                        <h3 class="mb-0">cdk-ai-constructs</h3>
-                        <div class="subheading mb-3">Published npm package | <a href="https://github.com/johnathan-horner/cdk-ai-constructs">github.com/johnathan-horner/cdk-ai-constructs</a></div>
-                        <ul class="fa-ul mb-0">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Published @johnathan-horner/cdk-ai-constructs on npm, a TypeScript library of 9 reusable constructs for Bedrock agents, SageMaker endpoints, multi-tenant Cognito, auditable S3 and Stripe billing.</li>
-                        </ul>
-                    </div>
-                </div>
             </section>
             <hr class="m-0" />
             <!-- Experience-->
@@ -203,7 +195,7 @@
                             <div class="subheading mb-3">Shoot It Analytics LLC</div>
                             <div class="subheading mb-1">Brooklyn, NY</div>
                             <ul class="fa-ul mb-0">
-                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Designed 7 AI platforms across finance, education, healthcare, legal and contact center, documented with architecture decision records and model cards, and published a reusable AWS CDK construct library.</li>
+                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Architected 7 AI platforms across finance, healthcare, education, legal, contact center and sports analytics, documented with architecture decision records and model cards, and published a CDK construct library of reusable AWS building blocks.</li>
                                 <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Mapped a fix for every compliance blocker across a 3-state K-12 network of 9 schools and 5,000 students by designing a FERPA and COPPA AI governance framework covering policy, process and technical controls on Vertex AI Agent Builder, BigQuery and Cloud DLP.</li>
                             </ul>
                         </div>
@@ -217,7 +209,7 @@
                             <div class="subheading mb-1">Manhattan, NY</div>
                             <ul class="fa-ul mb-0">
                                 <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Kept the network available for 100+ users and 150+ endpoints across multiple NYC sites by running Cisco routers, switches, firewalls and VPNs.</li>
-                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Brought 2 new shelter sites online with full IT buildouts and protected their data by building an AWS S3 backup pipeline with cross-region replication.</li>
+                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Brought 2 new shelter sites online with full IT buildouts, backed up by an AWS S3 pipeline with cross-region replication.</li>
                                 <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Wrote SOPs adopted as the standard reference by 100+ staff and C-suite leaders, and ran Active Directory, group policy and access provisioning.</li>
                             </ul>
                         </div>
@@ -256,7 +248,7 @@
                             <div class="subheading mb-3">4 the Fans Productions</div>
                             <div class="subheading mb-1">Bronx, NY</div>
                             <ul class="fa-ul mb-0">
-                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put high availability, automated backups and disaster recovery in place across 3 production AWS environments by resolving issues across EC2, S3, RDS, Lambda and CloudFormation.</li>
+                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put high availability, backups and disaster recovery in place across 3 production AWS environments (EC2, S3, RDS, Lambda).</li>
                                 <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Trained all 10 staff on AWS best practices, and earned AWS Solutions Architect Associate.</li>
                             </ul>
                         </div>
