@@ -43,3 +43,10 @@ package.json
 package-lock.json
 *.config.js
 npm-debug.log*
+# Terraform: state lives in the S3 backend (see infra/provider.tf). Never commit it.
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+*.tfplan
+crash.log

@@ -16,13 +16,20 @@ aws s3 sync assets s3://resume.johnathancloudspace.com/assets
 aws cloudfront create-invalidation --distribution-id EEIE83V7L9F3H --paths "/*"
 ```
 
-One-time cleanup of files that should not be public (needs approval, it deletes objects):
+## Protection (done 2026-10-23)
 
-```bash
-aws s3 rm s3://resume.johnathancloudspace.com/.git/ --recursive
-aws s3 rm s3://resume.johnathancloudspace.com/infra/ --recursive
-aws s3 rm s3://resume.johnathancloudspace.com/Cloudresume/ --recursive
-aws s3 rm s3://resume.johnathancloudspace.com/.DS_Store
-```
+- `.git/`, `infra/`, `Cloudresume/`, `.github/`, dotfiles and every stored version of them were
+  permanently deleted from the bucket.
+- The bucket policy has a `DenyHiddenAndStateFiles` statement that denies reading or uploading any
+  key starting with a dot or containing `/.`, and any `*.tfstate`, `*.tfstate.*`, `*.tfvars`,
+  `*.tfplan`, `*.log` or `logs/*` key. A sync that includes them now fails instead of publishing them.
+  The same statement is on the portfolio and root-domain buckets.
+
+## Terraform state
+
+State is in the private bucket `jhorner-terraform-state-194959907772` (public access blocked,
+versioned, encrypted, TLS only) at `cloud-resume/terraform.tfstate`, with S3-native locking
+(`use_lockfile = true`). Run `terraform init` in `infra/` to use it. Local state files are ignored
+by git.
 
 The visitor counter calls a Lambda function URL defined in `infra/` (Terraform).
