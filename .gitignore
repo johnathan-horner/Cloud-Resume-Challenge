@@ -50,3 +50,7 @@ npm-debug.log*
 *.tfvars
 *.tfplan
 crash.log
+
+# Python
+__pycache__/
+.pytest_cache/
