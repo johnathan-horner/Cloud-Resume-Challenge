@@ -33,3 +33,10 @@ versioned, encrypted, TLS only) at `cloud-resume/terraform.tfstate`, with S3-nat
 by git.
 
 The visitor counter calls a Lambda function URL defined in `infra/` (Terraform).
+
+## API Gateway logging role
+
+`infra/apigateway_logging.tf` owns the account-level API Gateway CloudWatch role
+(`apigateway-cloudwatch-logs`, AWS managed policy `AmazonAPIGatewayPushToCloudWatchLogs`). It is shared by
+every REST API in us-east-1, including the older `Visitcount` API (`16332ukzfl`), which is not managed by
+Terraform. The visitor counter on the resume page calls the `myfunc` Lambda function URL, not `Visitcount`.
