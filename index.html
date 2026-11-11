@@ -151,12 +151,12 @@
                         <div class="subheading mb-3">Live in production | <a href="https://shootitpicks.com">shootitpicks.com</a></div>
                         <ul class="fa-ul mb-0">
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Launched ShootItPicks as a live subscription product with 1,100+ automated tests gating every release by designing a serverless AWS architecture (Lambda, API Gateway, DynamoDB, Cognito, S3, CloudFront) with Stripe billing and CI/CD on least-privilege OIDC roles, built and maintained with Claude Code.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Cut request latency from 5.5 seconds to 0.15 seconds by finding that each request scanned 321 season records to use about 16 and re-partitioning DynamoDB by week.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Kept every number in ShootItPicks' AI assistant tied to source data, with unverifiable answers replaced before display, by designing tool calling across 12 data tools, code checks on each figure and a model from a different vendor grading each answer.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Blocked a model that cost 7 times more but scored below the current one by creating a 51-scenario evaluation suite, including adversarial cases, that gates every model change.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put live prices from 7 regulated US sportsbooks on 900+ priced sides by integrating The Odds API with 100% player matching, line and price from the same book, vig removed and a hard credit cap with alerts.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Brought the model's accuracy level with the betting market (Brier 0.1460 vs. 0.1467 on held-out weeks) by measuring it against market prices and pulling each estimate toward the market with weekly refits.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Removed a 25.7-point phantom edge from live prices by tracing it to invalid averaging of American odds and rebuilding the math in probability space, verified against 108 live market sides.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Cut request latency from 5.5 seconds to 0.15 seconds by finding that each request scanned 321 season records to use about 16 and re-partitioning DynamoDB by week.</li>
                         </ul>
                     </div>
                     <div class="mb-5">
@@ -264,7 +264,7 @@
                             <div class="subheading mb-1">Bronx, NY</div>
                             <ul class="fa-ul mb-0">
                                 <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put high availability, backups and disaster recovery in place across 3 production AWS environments (EC2, S3, RDS, Lambda).</li>
-                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Trained all 10 staff on AWS best practices, and earned AWS Solutions Architect Associate.</li>
+                                <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Trained all 10 staff on AWS best practices.</li>
                             </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Jul 2020 - Jul 2021</span></div>
