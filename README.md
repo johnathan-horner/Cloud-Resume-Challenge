@@ -31,7 +31,7 @@ Throughout my Cloud Resume Challenge journey, I utilized a variety of AWS servic
 
 1. **Amazon S3**: I used Amazon S3 (Simple Storage Service) to host the static website and store the necessary files.
 
-2. **AWS CloudFront**: To enhance the performance and availability of my website, I leveraged AWS CloudFront, a content delivery network (CDN), to distribute the content globally.
+2. **AWS CloudFront**: I put the site behind AWS CloudFront, a content delivery network (CDN), so it is served over HTTPS from edge locations.
 
 3. **Certificate Manager**: To secure my website with HTTPS, I utilized AWS Certificate Manager to manage and deploy SSL/TLS certificates.
 
@@ -39,11 +39,11 @@ Throughout my Cloud Resume Challenge journey, I utilized a variety of AWS servic
 
 5. **DynamoDB**: To store and retrieve data, I utilized DynamoDB, a fully managed NoSQL database service provided by AWS.
 
-6. **GitHub Actions**: I integrated GitHub Actions into my workflow for automating tasks, such as building and deploying the application.
+6. **GitHub Actions**: CI runs the visitor counter's unit tests (`tests/`) and checks the Terraform in `infra/` (`fmt`, `validate`) on every push and pull request. The original front-end and back-end deploy workflows are disabled (`.github/workflows/*.disabled`); the site is deployed by hand as described in [DEPLOY.md](DEPLOY.md).
 
 7. **Terraform**: I employed Terraform, an infrastructure as code tool, to define and provision my AWS resources in a declarative manner.
 
-By leveraging these services, I was able to build and deploy my Cloud Resume Challenge project in a scalable, secure, and efficient manner.
+Together these services host the resume site and its visitor counter.
 ## Blog Series
 I have documented my entire journey of completing The Cloud Resume Challenge in a series of blog posts. You can find the blog series on my website, Techwayurself.com.
 
