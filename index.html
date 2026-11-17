@@ -133,7 +133,7 @@
                     </div>
                     <div class="subheading mb-3">AI Solutions Architect | Solutions Architecture | AI Strategy and Enablement</div>
                     <div class="subheading mb-5">10 Years IT, Cloud and AI | 7 Years AWS | 4 AWS Certifications</div>
-                    <p class="lead mb-5">AI solutions architect with 10 years in IT, cloud and AI, including 7 years on AWS, and hands-on generative AI work since early 2023. Works with the people who own a problem to find where AI pays off, designs secure and cost-aware AWS architecture around it, and helps teams adopt it through clear documentation, runbooks and training. Ships working systems using AI-assisted development with Claude Code. Experienced in regulated settings including bank model risk (SR 26-2, formerly SR 11-7), HIPAA, FERPA and COPPA. Founder of Shoot It Analytics LLC, which runs ShootItPicks, a live subscription analytics product. Holds 4 AWS certifications, including Solutions Architect Professional and Generative AI Developer Professional.</p>
+                    <p class="lead mb-5">AI solutions architect with 10 years in IT, cloud and AI, including 7 years on AWS, and hands-on generative AI work since early 2023. Works with the people who own a problem to find where AI pays off, designs secure and cost-aware AWS architecture around it, and helps teams adopt it through clear documentation, runbooks and training. Ships working systems using AI-assisted development with Claude Code. Experienced in regulated settings: HIPAA and FDA requirements in diagnostics support, FERPA and COPPA governance for a K-12 network, and SR 26-2 model risk practices applied to generative AI. Founder of Shoot It Analytics LLC, which runs ShootItPicks, a live subscription analytics product. Holds 4 AWS certifications, including Solutions Architect Professional and Generative AI Developer Professional.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/johnathan-horner-99b37782"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/johnathan-horner"><i class="fab fa-github"></i></a>
@@ -161,38 +161,38 @@
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-0">FinTech AI</h3>
-                        <div class="subheading mb-3">Live public demo | <a href="https://fintech-ai-horner.streamlit.app">fintech-ai-horner.streamlit.app</a></div>
+                        <div class="subheading mb-3">Live | <a href="https://fintech-ai-horner.streamlit.app">fintech-ai-horner.streamlit.app</a></div>
                         <ul class="fa-ul mb-0">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Passed 22 of 23 held-out RAG test questions with 95.2% exact-fact accuracy on FinTech AI by building a 3-agent LangGraph pipeline (market analysis, risk assessment, portfolio management) with FAISS retrieval, HyDE, a cross-encoder re-ranker and an independent second model grading every answer.</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Put the agent pipeline under bank-style model risk controls, with the VaR backtest in the Basel green zone (Kupiec p-value 0.72 to 0.78 over 254 days), by gating each agent behind its own approval record, PSI drift monitoring and audit traces.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Passed all 23 held-out RAG test questions with 100% exact-fact accuracy on FinTech AI by building a 3-agent LangGraph pipeline (market analysis, risk assessment, portfolio management) with FAISS retrieval, HyDE, a cross-encoder re-ranker and an independent second model grading every answer.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Applied SR 26-2 model risk practices to the agent pipeline, though the guidance leaves generative AI out of scope, with the VaR backtest in the Basel green zone (Kupiec p-value 0.72 to 0.78 over 254 days), by gating each agent behind its own approval record, PSI drift monitoring and audit traces.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Defined FinTech AI's production AWS architecture in CDK (Bedrock Guardrails, KMS, CloudTrail, 7-year log retention), validated by cdk synth in CI, with Bedrock as primary model only after it passed held-out evaluation.</li>
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Exposed FinTech AI and Transaction Anomaly Detection to AI assistants through 2 FastMCP servers with 6 tools each, read-only and deterministic, so the same request always returns the same answer with no model calls.</li>
                         </ul>
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-0">Medical Image Triage</h3>
-                        <div class="subheading mb-3">Reference platform on public data</div>
+                        <div class="subheading mb-3">Live | <a href="https://medical-image-triage-horner.streamlit.app">medical-image-triage-horner.streamlit.app</a></div>
                         <ul class="fa-ul mb-0">
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Caught 99.5% of pneumonia cases (92.1% accuracy) on held-out chest X-rays by fine-tuning an image model on public MedMNIST data, auto-triaging 76.9% of cases with zero missed pneumonia and routing the rest to human review.</li>
                         </ul>
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-0">EduAI Connect</h3>
-                        <div class="subheading mb-3">Public demo on synthetic data</div>
+                        <div class="subheading mb-3">Live | <a href="https://eduai-connect-horner.streamlit.app">eduai-connect-horner.streamlit.app</a></div>
                         <ul class="fa-ul mb-0">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Designed a FERPA-aligned student risk platform as a LangGraph multi-agent graph with re-ranked retrieval on Bedrock, audit logging and a PII guardrail design, with a public demo on synthetic data.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Built a teacher Q&amp;A on synthetic student records where Claude Haiku 4.5 on Bedrock answers only from the retrieved records and cites their IDs, with a per-session cap and an audit log entry for every answer, as a FERPA-aligned design with controls partly built.</li>
                         </ul>
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-0">ConnectIQ</h3>
                         <div class="subheading mb-3">Architecture design</div>
                         <ul class="fa-ul mb-0">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Scoped ConnectIQ, a multi-tenant AI call center in 14 languages, on Amazon Connect, Lex and Bedrock, with escalation prediction that routes high-risk callers to human agents.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Scoped ConnectIQ, a multi-tenant multilingual AI call center on Amazon Connect, Lex and Bedrock, and audited which of 14 target languages AWS can carry on a live call (9 to 10 confirmed, 2 voicemail only, 2 not possible) to set an honest launch list.</li>
                         </ul>
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-0">cdk-ai-constructs</h3>
-                        <div class="subheading mb-3">Published npm package | <a href="https://github.com/johnathan-horner/cdk-ai-constructs">github.com/johnathan-horner/cdk-ai-constructs</a></div>
+                        <div class="subheading mb-3">Published npm package</div>
                         <ul class="fa-ul mb-0">
                             <li><span class="fa-li"><i class="fas fa-chevron-right text-primary"></i></span>Packaged 9 reusable AWS building blocks for Bedrock agents, SageMaker endpoints, multi-tenant Cognito, auditable S3 and Stripe billing into @johnathan-horner/cdk-ai-constructs on npm, a TypeScript library covered by 155 tests in CI.</li>
                         </ul>
